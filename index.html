@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Net Steps</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+            defer
+        ></script>
+        <script src="./src/main.js" type="module" defer></script>
+    </head>
+    <body>
+        <div class="container my-5">
+            <img class="p-2" src="./logo.png" alt="Logo">
+            <h2 class="text-center mb-4">Game Rules</h2>
+
+            <section class="mb-5">
+                <h3 class="p-3 rounded">Setup</h3>
+                <ul class="list-unstyled px-3">
+                    <li>1. Each player selects a pawn and places it at the starting point of the board.</li>
+                    <li>2. Shuffle the question cards, each containing one question with three difficulty levels: easy, medium, and hard.</li>
+                    <li>
+                        3. Explain the different types of spaces on the board:
+                        <ul>
+                            <li><strong>Question Square:</strong> The player answers a question based on the difficulty they choose.</li>
+                            <li><strong>Ladder Square:</strong> Allows the player to skip ahead to a higher space.</li>
+                            <li><strong>Virus Square:</strong> Forces the player to move backward.</li>
+                            <li><strong>Mystery Square:</strong> The player draws a Mystery Card and follows its instructions.</li>
+                        </ul>
+                    </li>
+                    <li>4. Determine the turn order: the youngest player starts, and the game continues in a clockwise direction.</li>
+                </ul>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="p-3 rounded">Gameplay</h3>
+                <ol class="px-3">
+                    <li>Players take turns rolling the die to advance on the board.</li>
+                    <li>
+                        When a player lands on a <strong>Question Square</strong>:
+                        <ul>
+                            <li>They must choose a difficulty level: easy, medium, or hard.</li>
+                            <li>
+                                The chosen difficulty determines the number of answer choices visible on the card:
+                                <ul>
+                                    <li><strong>Easy:</strong> The player sees 2 answer choices.</li>
+                                    <li><strong>Medium:</strong> The player sees 4 answer choices (all possible answers).</li>
+                                    <li><strong>Hard:</strong> No answer choices are provided; the player must respond without hints.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Correct answers allow the player to move forward:
+                                <ul>
+                                    <li><strong>Easy:</strong> Advance 1 space.</li>
+                                    <li><strong>Medium:</strong> Advance 2 spaces.</li>
+                                    <li><strong>Hard:</strong> Advance 3 spaces.</li>
+                                </ul>
+                            </li>
+                            <li>Incorrect answers result in no additional movement.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Reaching the Finish Line:</strong>
+                        <ul>
+                            <li>Players must land <strong>exactly</strong> on the final square to win the game.</li>
+                            <li>
+                                If a roll would take them past the finish line, they must "bounce back" by moving forward to the finish and then backward for
+                                the remaining steps.
+                            </li>
+                            <li><em>Example:</em> If a player is on square 98 and rolls a 3, they would move to square 99, then 100, and back to 99.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Special spaces add twists to the game:
+                        <ul>
+                            <li><strong>Ladder Square:</strong> Jump to a higher space on the board.</li>
+                            <li><strong>Virus Square:</strong> Move backward.</li>
+                            <li><strong>Mystery Square:</strong> Draw a Mystery Card and follow its effect, which may be positive or negative.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="p-3 rounded">Objective</h3>
+                <p>The first player to land <strong>exactly</strong> on the final square wins the game.</p>
+            </section>
+
+            <section class="mb-5">
+                <h3 class="p-3 rounded">Question Square Summary</h3>
+                <ul class="list-unstyled px-3">
+                    <li><strong>Easy:</strong> 2 answer choices, advance 1 space if correct.</li>
+                    <li><strong>Medium:</strong> 4 answer choices, advance 2 spaces if correct.</li>
+                    <li><strong>Hard:</strong> No answer choices, advance 3 spaces if correct.</li>
+                </ul>
+            </section>
+        </div>
+    </body>
+</html>
