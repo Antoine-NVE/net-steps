@@ -7,6 +7,7 @@ body {
     background-image: url(/assets/background.svg);
     background-size: cover;
     color: white;
+    background-color: black;
 }
 
 .container {
@@ -22,7 +23,7 @@ h5,
 h6 {
     font-family: 'berlin';
     text-shadow: black 1px 1px 1px;
-    color: white;
+    /* color: white; */
 }
 
 h2 {
@@ -34,15 +35,38 @@ h3 {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-img {
+#logo {
     max-width: 100%;
     margin: 0 auto;
     display: block;
-    border-radius: 1rem;
 }
 
-body {
-    background-color: #ffffff;
+#board {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+#presentation {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (max-width: 1200px) {
+    #board {
+        width: 75%;
+    }
+
+    #presentation {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #board {
+        width: 100%;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
